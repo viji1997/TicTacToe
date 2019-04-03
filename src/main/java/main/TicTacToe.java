@@ -5,24 +5,33 @@ import java.util.*;
 public class TicTacToe{
 public static int[][] ticbox;
 	public static int win(int [][]tic) {
-		//check all rows
-		//loop through rows from 0 to 3 and check if all the 3 places have same marks
- 		
-		
-		//check all cols
-		//loop through columns from 0 to 3 and check if all the 3 places have same marks
- 		
-		//check both diagonals 
-		
-		
-		
-		//write your code here !!!
-		
-		
-		
+
+for( int i=0; i<3; i++) {
+			
+			if(tic[i][i]==tic[i][i+1]) {
+				if(tic[i][i]==tic[i][i+2]) {
+					return tic[i][i];
+				}
+				}else if(tic[i][i]==tic[i+1][i]){
+					
+					if(tic[i][i]==tic[i+2][i]) {
+							return tic[i][i];
+						}
+						}else if(tic[i][i]==tic[i+1][+1]) {
+							if(tic[i][i]==tic[i+2][i+2]) {
+								return tic[i][i];
+							}
+						}
+			}
 		return 0;
+		}
 		
-	}
+	
+	
+			
+		
+		
+	
 	
 	public static void printBox(int [][]tic) {
 		for(int i=0;i<3;i++) {
@@ -33,16 +42,17 @@ public static int[][] ticbox;
 		}
 	}
 	public static boolean validate(int a1,int a2,int [][] tic) {
-		//check if a1 is between 0 & 3
-		//check if a2 is between 0 & 3
-		//check if the selected box is empty ie, already not marked by other player
-		//if all checks passed return true.
 		
-		
-		//Write your code here !!!
-		
+		if((a1>=0 && a1<3) && (a1>=0 && a1<3) && (tic[a1][a2]==0)) {
+			return true;
+		}else {
 		
 		return false;
+		}
+
+		
+		
+		
 	}
 	public static void main(String args[]) {
 		
